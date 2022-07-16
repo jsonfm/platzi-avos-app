@@ -4,6 +4,7 @@ import useSWR, { Fetcher } from 'swr'
 import Avocado from "@components/SVGIcons/Avocado";
 import Link from "next/link";
 
+
 const Home = () => {
     const fetcher = url => axios.get<TAPIAvoResponse>(url).then(res => res.data)
     const { data: response , error } = useSWR('api/avo', fetcher)
