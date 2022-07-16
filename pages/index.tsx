@@ -16,14 +16,14 @@ const Home = () => {
         <section className="text-xl font-bold flex justify-center">
             <div className="container-lg">
                 <div className="flex flex-col items-center pt-10 pb-12">
-                    <p className="flex text-4xl font-bold">Platzi <Avocado/> Avo</p>
+                    <p className="flex text-4xl font-bold">Platzi <Avocado className="avo-animation"/> Avo</p>
                     <Link href="/about">
                         <a className="text-md text-blue-500 mt-2">¿Debería comer un <b className="text-gray-500">Avo</b> hoy?</a>
                     </Link>
                 </div>
                 <div className="grid place-content-center md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {productList?.length > 0 &&  productList.map((product, index) => (
-                    <div className="border-2 rounded-md" key={`avo-${index}`}>
+                    <div className="border-2 rounded-md cursor-pointer hover:scale-[1.05] hover:drop-shadow-md ease-linear duration-200" key={`avo-${index}`}>
                         <img 
                             src={product.image}
                             className="w-72 h-auto border-b"
